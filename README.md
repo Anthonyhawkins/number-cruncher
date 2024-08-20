@@ -1,5 +1,5 @@
 # Number Cruncher CLI Utility
-This repo defines the requirements of a CLI utility which provides a number of math utilities.  Unit Converts, Basic Calculator, Area Calculator.
+This repo defines the requirements of a CLI utility which provides a number of math utilities.  A Unit Converter, Basic Calculator, and Area Calculator.
 
 
 
