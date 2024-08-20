@@ -1,0 +1,177 @@
+- section: Working Agreement
+  description: A working agreement is essentially a promise to you or to your team on habits and processes you agree to follow while working on a project.
+  tip: Try to incorporate as many of these habits as possible, as is they aim to reflect a real-world workflow vs just hacking away at something.  They are designed to keep you organized and ensure you deliver a quality product.
+  steps:
+  - name: Error Handling and Feedback
+    habit: true
+    icon: material-error bg-rose-600
+    text: As a developer, I agree to handle errors gracefully and provide feedback to the user.
+    list:
+      - Implement error messages for invalid commands, missing arguments, or other user errors.
+      - Ensure success messages for operations such as adding tasks or creating lists are distinct and easily visible.
+      - Provide suggestions for correcting common errors to guide users in the right direction.
+  - name: Stories Must be Properly Tested
+    habit: true
+    optional: true
+    icon: material-labs bg-emerald-600
+    text: As a developer, I agree to ensure each story is properly tested.  (A lot of times it can be a pain to test a CLI's tool main function, you'll understand when you get there, try your best, 100% code coverage is not required)
+    list:
+      - Each story includes necessary unit testing.
+      - Tests are run upon completion of a story.
+      - All tests should pass before merge.
+  - name: Use Story Branches
+    habit: true
+    optional: true
+    icon: material-folder_data bg-amber-600
+    text: As a developer, I agree to create a new git branch for each story I work on.
+    list:
+      - Checkout a new branch for each story.
+      - Development for a story is committed to the story branch.
+      - Upon completion, create a PR to merge a story branch back into main.
+      - If you are doing this project solo, you will be merging your own PRs.
+
+- section: (F) Project Setup and CLI Basics
+  description: Set up the basic structure of the NumberCruncher CLI tool, ensuring it’s user-friendly and easy to navigate.
+  steps:
+  - name: (S) Display Usage and Help Information
+    icon: material-sticky_note_2 bg-yellow-600
+    text: As a user, I want to view instructions and examples on how to use the NumberCruncher CLI tool, so that I can quickly understand the available features and commands.
+    links:
+      - CLI Requirements and Usage: https://github.com/Anthonyhawkins/number-cruncher
+    list:
+      - When I run the tool with the `-h` or `--help` option, it should display a clear and concise help message.
+      - The help output should include examples of how to use each command and describe what each option does.
+      - The tool should provide an error message if I enter a command incorrectly, along with a suggestion to view the help information.
+
+
+  - name: (S) Running the CLI Tool
+    icon: material-sticky_note_2 bg-yellow-600
+    text: As a user, I want to easily run the NumberCruncher CLI tool, so that I can perform conversions, calculations, and other operations from my command line.
+    list:
+      - I should be able to run the tool by entering `numcrunch` followed by the appropriate flags and values.
+      - The tool should accept commands such as `length`, `weight`, `volume`, `temperature`, `time`, `speed`, `area`, `calc`, and `areacalc` for different operations.
+      - The tool should prompt me with clear error messages if I fail to provide necessary arguments or provide them incorrectly.
+
+  - name: (S) Check the Version
+    optional: true
+    icon: material-sticky_note_2 bg-yellow-600
+    text: As a user, I want to check the version of the CLI tool, so that I know which version I am using.
+    list:
+      - I should be able to view the tool's version by running the tool with the `-v` or `--version` option.
+      - The tool should display the version number clearly and informatively.
+
+- section: (F) Unit Conversion Feature
+  description: Perform unit conversions for various measurements, such as length, weight, volume, and more.
+  steps:
+  - name: (S) Convert Length Units
+    icon: material-sticky_note_2 bg-yellow-600
+    text: As a user, I want to convert between different length units, so that I can easily compare measurements like inches, feet, meters, and kilometers.
+    list:
+      - I should be able to convert length units by specifying `-command=length`, `-from`, `-to`, and `-value`.
+      - The tool should support conversions between units like inches, centimeters, feet, meters, miles, kilometers, yards, and millimeters.
+      - After entering the conversion command, I should see the converted value displayed clearly.
+
+  - name: (S) Convert Weight Units
+    icon: material-sticky_note_2 bg-yellow-600
+    text: As a user, I want to convert between different weight units, so that I can easily compare measurements like pounds, kilograms, and grams.
+    list:
+      - I should be able to convert weight units by specifying `-command=weight`, `-from`, `-to`, and `-value`.
+      - The tool should support conversions between units like pounds, kilograms, ounces, grams, tons, metric tons, stone, and milligrams.
+      - The result of the conversion should be displayed clearly and accurately.
+
+  - name: (S) Convert Volume Units
+    icon: material-sticky_note_2 bg-yellow-600
+    text: As a user, I want to convert between different volume units, so that I can easily compare measurements like liters, gallons, and milliliters.
+    list:
+      - I should be able to convert volume units by specifying `-command=volume`, `-from`, `-to`, and `-value`.
+      - The tool should support conversions between units like gallons, liters, quarts, pints, cups, fluid ounces, and milliliters.
+      - The tool should display the conversion result clearly, with the correct units.
+
+  - name: (S) Convert Temperature Units
+    icon: material-sticky_note_2 bg-yellow-600
+    text: As a user, I want to convert between different temperature units, so that I can easily compare temperatures in Celsius, Fahrenheit, and Kelvin.
+    list:
+      - I should be able to convert temperature units by specifying `-command=temperature`, `-from`, `-to`, and `-value`.
+      - The tool should support conversions between Celsius, Fahrenheit, and Kelvin.
+      - The result of the conversion should be displayed accurately, with appropriate rounding if necessary.
+
+  - name: (S) Convert Time Units
+    icon: material-sticky_note_2 bg-yellow-600
+    text: As a user, I want to convert between different time units, so that I can easily compare durations in seconds, minutes, hours, and days.
+    list:
+      - I should be able to convert time units by specifying `-command=time`, `-from`, `-to`, and `-value`.
+      - The tool should support conversions between units like seconds, minutes, hours, days, weeks, and months.
+      - The conversion result should be clear and precise.
+
+  - name: (S) Convert Speed Units
+    icon: material-sticky_note_2 bg-yellow-600
+    text: As a user, I want to convert between different speed units, so that I can easily compare speeds in mph, km/h, and knots.
+    list:
+      - I should be able to convert speed units by specifying `-command=speed`, `-from`, `-to`, and `-value`.
+      - The tool should support conversions between units like mph, km/h, fps, m/s, and knots.
+      - The conversion result should be displayed clearly.
+
+  - name: (S) Convert Area Units
+    icon: material-sticky_note_2 bg-yellow-600
+    text: As a user, I want to convert between different area units, so that I can easily compare measurements like square feet, square meters, and acres.
+    list:
+      - I should be able to convert area units by specifying `-command=area`, `-from`, `-to`, and `-value`.
+      - The tool should support conversions between units like square feet, square meters, acres, hectares, square inches, and square centimeters.
+      - The conversion result should be accurate and easy to understand.
+
+- section: (F) Calculator Feature
+  description: Perform basic arithmetic operations like addition, subtraction, multiplication, and division.
+  steps:
+  - name: (S) Perform Addition
+    icon: material-sticky_note_2 bg-yellow-600
+    text: As a user, I want to add two numbers, so that I can quickly calculate sums directly from the command line.
+    list:
+      - I should be able to perform addition by specifying `-command=calc`, `-from=add`, `-value`, and `-value2`.
+      - The tool should display the result of the addition operation clearly.
+
+  - name: (S) Perform Subtraction
+    icon: material-sticky_note_2 bg-yellow-600
+    text: As a user, I want to subtract one number from another, so that I can quickly calculate differences directly from the command line.
+    list:
+      - I should be able to perform subtraction by specifying `-command=calc`, `-from=subtract`, `-value`, and `-value2`.
+      - The tool should display the result of the subtraction operation clearly.
+
+  - name: (S) Perform Multiplication
+    icon: material-sticky_note_2 bg-yellow-600
+    text: As a user, I want to multiply two numbers, so that I can quickly calculate products directly from the command line.
+    list:
+      - I should be able to perform multiplication by specifying `-command=calc`, `-from=multiply`, `-value`, and `-value2`.
+      - The tool should display the result of the multiplication operation clearly.
+
+  - name: (S) Perform Division
+    icon: material-sticky_note_2 bg-yellow-600
+    text: As a user, I want to divide one number by another, so that I can quickly calculate quotients directly from the command line.
+    list:
+      - I should be able to perform division by specifying `-command=calc`, `-from=divide`, `-value`, and `-value2`.
+      - The tool should handle cases where division by zero is attempted by displaying an error message.
+      - The result of the division operation should be displayed clearly and accurately.
+
+- section: (F) Area Calculator Feature
+  description: Calculate the area of different geometric shapes such as squares, circles, and triangles.
+  steps:
+  - name: (S) Calculate Square Area
+    icon: material-sticky_note_2 bg-yellow-600
+    text: As a user, I want to calculate the area of a square, so that I can determine the size of square spaces directly from the command line.
+    list:
+      - I should be able to calculate the area of a square by specifying `-command=areacalc`, `-shape=square`, and `-side`.
+      - The tool should display the calculated area clearly.
+
+  - name: (S) Calculate Circle Area
+    icon: material-sticky_note_2 bg-yellow-600
+    text: As a user, I want to calculate the area of a circle, so that I can determine the size of circular spaces directly from the command line.
+    list:
+      - I should be able to calculate the area of a circle by specifying `-command=areacalc`, `-shape=circle`, and `-radius`.
+      - The tool should display the calculated area clearly.
+
+  - name: (S) Calculate Triangle Area
+    icon: material-sticky_note_2 bg-yellow-600
+    text: As a user, I want to calculate the area of a triangle, so that I can determine the size of triangular spaces directly from the command line.
+    list:
+      - I should be able to calculate the area of a triangle by specifying `-command=areacalc`, `-shape=triangle`, `-base`, and `-height`.
+      - The tool should display the calculated area clearly.
+

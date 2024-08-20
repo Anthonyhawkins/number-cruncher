@@ -1,0 +1,58 @@
+{
+  "length_conversions": [
+      {"from": "inches", "to": "centimeters", "value": 10.0, "expected": 25.4},
+      {"from": "feet", "to": "meters", "value": 3.0, "expected": 0.9144},
+      {"from": "miles", "to": "kilometers", "value": 5.0, "expected": 8.0467},
+      {"from": "yards", "to": "meters", "value": 2.0, "expected": 1.8288},
+      {"from": "millimeters", "to": "inches", "value": 50.0, "expected": 1.9685}
+  ],
+  "weight_conversions": [
+      {"from": "pounds", "to": "kilograms", "value": 50.0, "expected": 22.6796},
+      {"from": "ounces", "to": "grams", "value": 16.0, "expected": 453.592},
+      {"from": "tons", "to": "metrictons", "value": 2.0, "expected": 1.81437},
+      {"from": "stone", "to": "pounds", "value": 5.0, "expected": 70.0},
+      {"from": "milligrams", "to": "grams", "value": 1000.0, "expected": 1.0}
+  ],
+  "volume_conversions": [
+      {"from": "gallons", "to": "liters", "value": 3.0, "expected": 11.3562},
+      {"from": "quarts", "to": "liters", "value": 2.0, "expected": 1.89271},
+      {"from": "pints", "to": "milliliters", "value": 1.0, "expected": 473.176},
+      {"from": "cups", "to": "milliliters", "value": 2.0, "expected": 473.176},
+      {"from": "fluidounces", "to": "milliliters", "value": 8.0, "expected": 236.588}
+  ],
+  "temperature_conversions": [
+      {"from": "celsius", "to": "fahrenheit", "value": 25.0, "expected": 77.0},
+      {"from": "fahrenheit", "to": "celsius", "value": 77.0, "expected": 25.0},
+      {"from": "celsius", "to": "kelvin", "value": 25.0, "expected": 298.15},
+      {"from": "kelvin", "to": "celsius", "value": 300.0, "expected": 26.85}
+  ],
+  "time_conversions": [
+      {"from": "seconds", "to": "minutes", "value": 120.0, "expected": 2.0},
+      {"from": "minutes", "to": "hours", "value": 120.0, "expected": 2.0},
+      {"from": "hours", "to": "days", "value": 48.0, "expected": 2.0},
+      {"from": "days", "to": "weeks", "value": 14.0, "expected": 2.0},
+      {"from": "weeks", "to": "months", "value": 8.0, "expected": 1.84076}
+  ],
+  "speed_conversions": [
+      {"from": "mph", "to": "kmh", "value": 60.0, "expected": 96.5606},
+      {"from": "fps", "to": "mps", "value": 30.0, "expected": 9.144},
+      {"from": "knots", "to": "mph", "value": 20.0, "expected": 23.0156},
+      {"from": "mps", "to": "kmh", "value": 20.0, "expected": 72.0}
+  ],
+  "area_conversions": [
+      {"from": "squarefeet", "to": "squaremeters", "value": 500.0, "expected": 46.4515},
+      {"from": "acres", "to": "hectares", "value": 2.0, "expected": 0.809372},
+      {"from": "squareinches", "to": "squarecentimeters", "value": 100.0, "expected": 645.16}
+  ],
+  "basic_calculations": [
+      {"operation": "add", "value1": 10.0, "value2": 5.0, "expected": 15.0},
+      {"operation": "subtract", "value1": 10.0, "value2": 5.0, "expected": 5.0},
+      {"operation": "multiply", "value1": 10.0, "value2": 5.0, "expected": 50.0},
+      {"operation": "divide", "value1": 10.0, "value2": 5.0, "expected": 2.0}
+  ],
+  "area_calculations": [
+      {"shape": "square", "side": 4.0, "expected": 16.0},
+      {"shape": "circle", "radius": 3.0, "expected": 28.2743},
+      {"shape": "triangle", "base": 4.0, "height": 5.0, "expected": 10.0}
+  ]
+}
